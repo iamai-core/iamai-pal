@@ -1,6 +1,6 @@
 # iamai-pal
 AI personal assistant application
-
+![N.O.V.A. Project Image](Content/Images/novaprojectimage.png)
 # N.O.V.A. – Next-gen Optimized Virtual Assistant
 
 **N.O.V.A. (Next-gen Optimized Virtual Assistant)** is an AI-powered personal assistant desktop application built using **Unreal Engine 5** and **C++**, designed to be accessible, useful, and engaging for users of all ages. The assistant features a 3D animated robot companion with both voice and text interaction, integrating cutting-edge AI models for smart responses.
