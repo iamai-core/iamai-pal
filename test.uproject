@@ -15,8 +15,5 @@
 			"Name": "TextToSpeech",
 			"Enabled": true
 		}
-	],
-	"AdditionalPluginDirectories": [
-		"../../../../../../../Downloads/iamai-unreal-collingreiss-Plugin/iamai-unreal-collingreiss-Plugin"
 	]
 }
