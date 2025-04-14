@@ -68,10 +68,8 @@ Saved/*
 
 # Compiled source files for the engine to use
 Intermediate/*
-Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
-/Content/__ExternalActors__
-/Content/DreamscapeSeries
 /Content/Stylized_PBR_Nature/Maps
+/Content/__ExternalActors__/Maps
