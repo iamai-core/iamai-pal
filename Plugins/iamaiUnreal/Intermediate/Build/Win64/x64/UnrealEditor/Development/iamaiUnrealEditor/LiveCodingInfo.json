@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.iamaiUnrealEditor.cpp.obj": [
+			"AssetTypeActions_GGUFModelAsset.cpp.obj",
+			"GGUFModelFactory.cpp.obj",
+			"iamaiUnrealEditor.cpp.obj",
+			"GGUFModelFactory.gen.cpp.obj",
+			"iamaiUnrealEditor.init.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj"
+		]
+	}
+}

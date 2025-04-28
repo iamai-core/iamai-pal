@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\trevor hicks\\desktop\\neumont college\\fourth year\\spring2025\\enterprise 3\\nova project\\iamai-pal\\plugins\\iamaiunreal\\intermediate\\build\\win64\\unrealeditor\\inc\\iamaiunrealeditor\\uht\\iamaiunrealeditor.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\trevor hicks\\desktop\\neumont college\\fourth year\\spring2025\\enterprise 3\\nova project\\iamai-pal\\intermediate\\build\\win64\\x64\\testeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "c:\\users\\trevor hicks\\desktop\\neumont college\\fourth year\\spring2025\\enterprise 3\\nova project\\iamai-pal\\plugins\\iamaiunreal\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\iamaiunrealeditor\\definitions.iamaiunrealeditor.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

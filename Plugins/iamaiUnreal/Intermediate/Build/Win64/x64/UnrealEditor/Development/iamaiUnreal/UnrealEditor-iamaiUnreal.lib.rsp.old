@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-iamaiUnreal.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Intermediate\Build\Win64\x64\testEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h.obj"
+"C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\Module.iamaiUnreal.cpp.obj"
+"C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\Default.rc2.res"
+/OUT:"C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\UnrealEditor-iamaiUnreal.lib"

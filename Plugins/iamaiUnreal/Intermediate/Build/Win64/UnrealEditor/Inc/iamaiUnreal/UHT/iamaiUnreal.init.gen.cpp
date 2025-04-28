@@ -29,7 +29,7 @@ void EmptyLinkFunctionForGeneratedCodeiamaiUnreal_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x8FFC972E,
+				0xFE817016,
 				0xC992D513,
 				METADATA_PARAMS(0, nullptr)
 			};
@@ -37,5 +37,5 @@ void EmptyLinkFunctionForGeneratedCodeiamaiUnreal_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_iamaiUnreal.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_iamaiUnreal(Z_Construct_UPackage__Script_iamaiUnreal, TEXT("/Script/iamaiUnreal"), Z_Registration_Info_UPackage__Script_iamaiUnreal, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x8FFC972E, 0xC992D513));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_iamaiUnreal(Z_Construct_UPackage__Script_iamaiUnreal, TEXT("/Script/iamaiUnreal"), Z_Registration_Info_UPackage__Script_iamaiUnreal, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xFE817016, 0xC992D513));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

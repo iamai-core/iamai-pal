@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\trevor hicks\\desktop\\neumont college\\fourth year\\spring2025\\enterprise 3\\nova project\\iamai-pal\\plugins\\iamaiunreal\\intermediate\\build\\win64\\unrealeditor\\inc\\iamaiunreal\\uht\\transcribeaudio.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\trevor hicks\\desktop\\neumont college\\fourth year\\spring2025\\enterprise 3\\nova project\\iamai-pal\\intermediate\\build\\win64\\x64\\testeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "c:\\users\\trevor hicks\\desktop\\neumont college\\fourth year\\spring2025\\enterprise 3\\nova project\\iamai-pal\\plugins\\iamaiunreal\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\iamaiunreal\\definitions.iamaiunreal.h",
+            "c:\\users\\trevor hicks\\desktop\\neumont college\\fourth year\\spring2025\\enterprise 3\\nova project\\iamai-pal\\plugins\\iamaiunreal\\source\\iamaiunreal\\public\\transcribeaudio.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\kismet\\blueprintasyncactionbase.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\blueprintasyncactionbase.generated.h",
+            "c:\\users\\trevor hicks\\desktop\\neumont college\\fourth year\\spring2025\\enterprise 3\\nova project\\iamai-pal\\plugins\\iamaiunreal\\intermediate\\build\\win64\\unrealeditor\\inc\\iamaiunreal\\uht\\transcribeaudio.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
