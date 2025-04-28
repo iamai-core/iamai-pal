@@ -6,8 +6,9 @@ iamaiAI::iamaiAI(UGGUFModelAsset* model) {
 
 	LoadDLL();
 
-	// Initialize the model
-	ctx = _init(TCHAR_TO_UTF8(*(model->FilePath)));
+	TempFilePath = SaveTempModelFile(model);
+	ctx = _init(TCHAR_TO_UTF8(*TempFilePath));
+
 	if (!ctx) throw std::runtime_error("Failed to initialize iamai model");
 
 }
@@ -19,11 +20,26 @@ iamaiAI::iamaiAI(UGGUFModelAsset* model, int size, int tokens, int batch, int th
 
 	LoadDLL();
 
-	// Initialize the model context
-	ctx = _fullInit(TCHAR_TO_UTF8(*(model->FilePath)), size, tokens, batch, threads);
-	int errorCode = GetLastError();
+	TempFilePath = SaveTempModelFile(model);
+	ctx = _fullInit(TCHAR_TO_UTF8(*TempFilePath), size, tokens, batch, threads);
+
 	if (!ctx) throw std::runtime_error("Failed to initialize iamai model");
 
+}
+
+FString iamaiAI::SaveTempModelFile(UGGUFModelAsset* model) {
+
+	if (!model || model->FileData.Num() == 0) {
+		throw std::invalid_argument("Model data is invalid or empty");
+	}
+
+	FString TempDir = FPaths::ProjectSavedDir(); // Or use FPaths::ProjectIntermediateDir()
+	FString UniqueFilename = FPaths::CreateTempFilename(*TempDir, TEXT("iamai_model_"), TEXT(".gguf"));
+	if (!FFileHelper::SaveArrayToFile(model->FileData, *UniqueFilename)) {
+		throw std::runtime_error("Failed to save temp model file");
+	}
+
+	return UniqueFilename;
 }
 
 void iamaiAI::LoadDLL() {
@@ -117,6 +133,8 @@ iamaiAI::~iamaiAI() {
 			DllHandle = nullptr;
 
 		}
+
+		if (!TempFilePath.IsEmpty()) IFileManager::Get().Delete(*TempFilePath);
 
 		disposed = true;
 

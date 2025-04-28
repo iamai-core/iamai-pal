@@ -16,7 +16,20 @@ UGGUFModelFactory::UGGUFModelFactory() {
 UObject* UGGUFModelFactory::FactoryCreateFile(UClass* InClass, UObject* InParent, FName InName, EObjectFlags Flags, const FString& Filename, const TCHAR* Parms, FFeedbackContext* Warn, bool& bOutOperationCanceled) {
 
     UGGUFModelAsset* NewAsset = NewObject<UGGUFModelAsset>(InParent, InClass, InName, Flags);
-    NewAsset->FilePath = Filename;
+
+    TArray<uint8> FileData;
+    if (FFileHelper::LoadFileToArray(FileData, *Filename)) {
+
+        NewAsset->FileData = MoveTemp(FileData);
+
+    } else {
+
+        UE_LOG(LogTemp, Warning, TEXT("Failed to load file: %s"), *Filename);
+        bOutOperationCanceled = true;
+        return nullptr;
+
+    }
+
     return NewAsset;
 
 }
