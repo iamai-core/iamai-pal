@@ -1,0 +1,38 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.1",
+	"FriendlyName": "iamai Unreal",
+	"Description": "Personal AI for your own endevors",
+	"Category": "AI",
+	"CreatedBy": "iamai-core",
+	"CreatedByURL": "https://iamai-core.org",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EnabledByDefault": true,
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "iamaiUnreal",
+			"Type": "Runtime"
+		},
+		{
+			"Name": "iamaiUnrealEditor",
+			"Type": "Editor",
+			"AdditionalDependencies": [ "iamaiUnreal" ]
+		}
+	],
+	"AdditionalNonAssetDirectoriesToCopy": [
+		"Models"
+	],
+	"Plugins": [
+		{
+			"Name": "AudioCapture",
+			"Enabled": true
+		}
+	]
+}
