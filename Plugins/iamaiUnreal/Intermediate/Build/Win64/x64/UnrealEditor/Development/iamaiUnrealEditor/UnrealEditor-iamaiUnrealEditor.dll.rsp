@@ -21,7 +21,7 @@
 /ALTERNATENAME:__imp___std_init_once_complete=__imp_InitOnceComplete
 /DELAYLOAD:"d3d12.dll"
 /DELAYLOAD:"DBGHELP.DLL"
-/LIBPATH:"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.38.33130\lib\x64"
+/LIBPATH:"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.42.34433\lib\x64"
 /LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\ucrt\x64"
 /LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\um\x64"
 /NODEFAULTLIB:"LIBCMT"
@@ -36,14 +36,12 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN:6
 /NOIMPLIB
-"C:\Users\Collin\Documents\Repos\iamai-pal\Intermediate\Build\Win64\x64\testEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h.obj"
-"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.obj"
-"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\GGUFModelFactory.cpp.obj"
-"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\PerModuleInline.gen.cpp.obj"
-"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Default.rc2.res"
+"C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Intermediate\Build\Win64\x64\testEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h.obj"
+"C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.obj"
+"C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Default.rc2.res"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Slate\UnrealEditor-Slate.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\SlateCore\UnrealEditor-SlateCore.lib"
-"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\UnrealEditor-iamaiUnreal.lib"
+"C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\UnrealEditor-iamaiUnreal.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\EditorStyle\UnrealEditor-EditorStyle.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\UnrealEd\UnrealEditor-UnrealEd.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\AssetTools\UnrealEditor-AssetTools.lib"
@@ -76,6 +74,6 @@
 "synchronization.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Binaries\Win64\UnrealEditor-iamaiUnrealEditor.dll"
-/PDB:"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Binaries\Win64\UnrealEditor-iamaiUnrealEditor.pdb"
+/OUT:"C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Binaries\Win64\UnrealEditor-iamaiUnrealEditor.dll"
+/PDB:"C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Binaries\Win64\UnrealEditor-iamaiUnrealEditor.pdb"
 /ignore:4078
