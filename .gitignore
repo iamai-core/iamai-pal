@@ -57,8 +57,6 @@ Build/*
 Build/*/**
 !Build/*/PakBlacklist*.txt
 
-# Don't ignore icon files in Build
-!Build/**/*.ico
 
 # Built data for maps
 *_BuiltData.uasset
@@ -71,5 +69,5 @@ Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
-/Content/Stylized_PBR_Nature/Maps
 
+/Content/Stylized_PBR_Nature/Maps
