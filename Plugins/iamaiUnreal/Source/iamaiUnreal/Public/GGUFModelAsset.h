@@ -13,6 +13,6 @@ class IAMAIUNREAL_API UGGUFModelAsset : public UObject {
 public:
 
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Model")
-    FString FilePath;
+    TArray<uint8> FileData;
 
 };

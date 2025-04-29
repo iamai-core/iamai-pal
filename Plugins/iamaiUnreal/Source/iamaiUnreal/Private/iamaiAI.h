@@ -30,8 +30,6 @@ public:
 	iamaiAI(UGGUFModelAsset* model, int size, int tokens = 512, int batch = 512, int threads = 1);
 	~iamaiAI();
 
-	void LoadDLL();
-
 	iamaiAI(const iamaiAI&) = delete;
 	iamaiAI& operator=(const iamaiAI&) = delete;
 
@@ -42,6 +40,11 @@ public:
 	}
 
 private:
+
+	void LoadDLL();
+
+	FString SaveTempModelFile(UGGUFModelAsset* model);
+	FString TempFilePath;
 
 	LibHandle DllHandle;
 	void* ctx = nullptr;
