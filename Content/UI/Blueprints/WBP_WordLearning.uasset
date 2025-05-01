@@ -1,0 +1,133 @@
+// Root Widget Layout
+VerticalBox "MainContainer"
+{
+    // Top Section - Word Display
+    Overlay "WordSection"
+    {
+        Size Box
+        {
+            Height: 200
+            Width: 600
+            Content: TextBlock "WordDisplay"
+            {
+                Text: "ELEPHANT"
+                Font Size: 72
+                Justification: Center
+                Color: #000000
+            }
+        }
+    }
+
+    // Middle Section - Image Display
+    Overlay "ImageSection"
+    {
+        Size Box
+        {
+            Height: 300
+            Width: 600
+            Content: Image "AnimalImage"
+            {
+                Brush: None // We'll set this dynamically
+            }
+        }
+    }
+
+    // Bottom Section - Controls
+    HorizontalBox "ControlsSection"
+    {
+        Button "PreviousButton"
+        {
+            Text: "Previous"
+        }
+        
+        Button "SpeakButton"
+        {
+            Text: "Speak!"
+        }
+        
+        Button "NextButton"
+        {
+            Text: "Next"
+        }
+    }
+}
+
+// Variables
+UPROPERTY(EditDefaultsOnly, Category = "Word Learning")
+UDataTable* AnimalWordsTable;
+
+UPROPERTY()
+int32 CurrentWordIndex;
+
+UPROPERTY()
+TArray<FAnimalWordData> WordList;
+
+// Functions
+void InitializeWordList()
+{
+    if (AnimalWordsTable)
+    {
+        AnimalWordsTable->GetAllRows<FAnimalWordData>("", WordList);
+        if (WordList.Num() > 0)
+        {
+            DisplayWord(0);
+        }
+    }
+}
+
+void DisplayWord(int32 Index)
+{
+    if (WordList.IsValidIndex(Index))
+    {
+        CurrentWordIndex = Index;
+        WordDisplay->SetText(FText::FromString(WordList[Index].Word));
+        // Load and set image
+        if (!WordList[Index].ImagePath.IsNull())
+        {
+            // Load image asset
+            AnimalImage->SetBrushFromTexture(Cast<UTexture2D>(WordList[Index].ImagePath.TryLoad()));
+        }
+    }
+}
+
+UFUNCTION()
+void OnPreviousClicked()
+{
+    if (CurrentWordIndex > 0)
+    {
+        DisplayWord(CurrentWordIndex - 1);
+    }
+}
+
+UFUNCTION()
+void OnNextClicked()
+{
+    if (CurrentWordIndex < WordList.Num() - 1)
+    {
+        DisplayWord(CurrentWordIndex + 1);
+    }
+}
+
+UFUNCTION()
+void OnSpeakClicked()
+{
+    if (WordList.IsValidIndex(CurrentWordIndex))
+    {
+        // Trigger robot speaking animation
+        if (APlayerPawn* Pawn = Cast<APlayerPawn>(GetOwningPlayerPawn()))
+        {
+            // Play speaking animation
+            // You'll need to implement this in your pawn blueprint
+            Pawn->PlaySpeakingAnimation();
+        }
+        
+        // Play pronunciation sound
+        if (!WordList[CurrentWordIndex].SoundPath.IsNull())
+        {
+            if (USoundWave* Sound = Cast<USoundWave>(WordList[CurrentWordIndex].SoundPath.TryLoad()))
+            {
+                PlaySound(Sound);
+            }
+        }
+    }
+} 
