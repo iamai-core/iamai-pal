@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.IO;
 using UnrealBuildTool;
 
@@ -6,7 +7,7 @@ public class iamaiUnreal : ModuleRules {
 
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         bEnableExceptions = true;
-        // PublicDefinitions.Add( "PLATFORM_EXCEPTIONS_DISABLED=0" );
+
 
         PublicDependencyModuleNames.AddRange( new string[] {
             "Core",
@@ -15,7 +16,8 @@ public class iamaiUnreal : ModuleRules {
             "AudioCapture",
             "AudioCaptureCore",
             "AudioMixer",
-            "AudioMixerCore"
+            "AudioMixerCore",
+            "SignalProcessing"
         } );
 
         PrivateDependencyModuleNames.AddRange( new string[] {
@@ -23,5 +25,39 @@ public class iamaiUnreal : ModuleRules {
             "SlateCore",
             "AudioMixer"
         } );
+
+        string ModelsFolder = Path.Combine(PluginDirectory, "Models");
+        string[] ModelFiles = Directory.GetFiles(ModelsFolder, "*", SearchOption.AllDirectories);
+        foreach ( string File in ModelFiles ) {
+            RuntimeDependencies.Add( File, StagedFileType.NonUFS );
+        }
+
+        
+        string PluginBaseDir = Path.GetFullPath(Path.Combine(ModuleDirectory, "../.."));
+        string ThirdPartyPath = Path.Combine(PluginBaseDir, "ThirdParty");
+
+        if ( !Directory.Exists( ThirdPartyPath ) ) return;
+
+        if ( Target.Platform == UnrealTargetPlatform.Win64 ) {
+
+            try {
+
+                IEnumerable<string> ThirdPartyDLLs = Directory.EnumerateFiles(ThirdPartyPath, "*.dll", SearchOption.TopDirectoryOnly);
+                foreach ( string SourceDllPath in ThirdPartyDLLs ) {
+                   
+                    string DllName = Path.GetFileName(SourceDllPath);
+                    string DestDllPath = Path.Combine("$(TargetOutputDir)", DllName);
+                    RuntimeDependencies.Add( DestDllPath, SourceDllPath );
+
+                }
+
+            } catch ( System.Exception ex ) {
+
+                System.Console.WriteLine( $"Error finding DLLs in {ThirdPartyPath}: {ex.Message}" );
+
+            }
+
+        }
+
     }
 }

@@ -2,12 +2,19 @@
 
 #include "Misc/Paths.h"
 
+
+#if PLATFORM_WINDOWS
+#define LIBNAME "iamai-core.dll";
+#else
+#define LIBNAME  "libiamai-core.dylib";
+#endif
+
 iamaiAI::iamaiAI(UGGUFModelAsset* model) {
 
 	LoadDLL();
 
-	TempFilePath = SaveTempModelFile(model);
-	ctx = _init(TCHAR_TO_UTF8(*TempFilePath));
+	FString path = FPaths::ProjectDir() / model->FilePath;
+	ctx = _init(TCHAR_TO_UTF8(*path));
 
 	if (!ctx) throw std::runtime_error("Failed to initialize iamai model");
 
@@ -20,69 +27,40 @@ iamaiAI::iamaiAI(UGGUFModelAsset* model, int size, int tokens, int batch, int th
 
 	LoadDLL();
 
-	TempFilePath = SaveTempModelFile(model);
-	ctx = _fullInit(TCHAR_TO_UTF8(*TempFilePath), size, tokens, batch, threads);
+	FString path = FPaths::ProjectDir() / model->FilePath;
+	ctx = _fullInit(TCHAR_TO_UTF8(*path), size, tokens, batch, threads);
 
 	if (!ctx) throw std::runtime_error("Failed to initialize iamai model");
 
 }
 
-FString iamaiAI::SaveTempModelFile(UGGUFModelAsset* model) {
-
-	if (!model || model->FileData.Num() == 0) {
-		throw std::invalid_argument("Model data is invalid or empty");
-	}
-
-	FString TempDir = FPaths::ProjectSavedDir(); // Or use FPaths::ProjectIntermediateDir()
-	FString UniqueFilename = FPaths::CreateTempFilename(*TempDir, TEXT("iamai_model_"), TEXT(".gguf"));
-	if (!FFileHelper::SaveArrayToFile(model->FileData, *UniqueFilename)) {
-		throw std::runtime_error("Failed to save temp model file");
-	}
-
-	return UniqueFilename;
-}
-
 void iamaiAI::LoadDLL() {
 
-	FString ProjectDirFString = FPaths::ProjectDir();
-	FString PluginDirFString = FPaths::Combine(ProjectDirFString, TEXT("Plugins"), TEXT("iamaiUnreal"));
-	FString LibDirectoryFString = FPaths::Combine(PluginDirFString, TEXT("ThirdParty"));
+	FString BinaryDir = FPaths::Combine(FPaths::ProjectDir(), TEXT("Binaries"), TEXT("Win64"));
 
-	std::string libName;
+	std::string libName = LIBNAME;
 
-#if PLATFORM_WINDOWS
-
-	libName = "iamai-core.dll";
-
-#else
-
-	libName = "libiamai-core.dylib";
-
-#endif
-
-	FString LibPathFString = FPaths::Combine(LibDirectoryFString, UTF8_TO_TCHAR(libName.c_str()));
+	FString LibPathFString = FPaths::Combine(BinaryDir, UTF8_TO_TCHAR(libName.c_str()));
 	std::string libPath = TCHAR_TO_UTF8(*LibPathFString);
 
-	if (!FPaths::FileExists(UTF8_TO_TCHAR(libPath.c_str()))) throw std::runtime_error("Shared library not found: " + libPath);
+	if (!FPaths::FileExists(UTF8_TO_TCHAR(libPath.c_str()))) {
+		throw std::runtime_error("Shared library not found: " + libPath);
+	}
 
 	std::cout << "Loading shared library from: " << libPath << std::endl;
 
 #if PLATFORM_WINDOWS
-
-	SetDllDirectoryA(TCHAR_TO_UTF8(*LibDirectoryFString));
+	SetDllDirectoryA(TCHAR_TO_UTF8(*BinaryDir));
 	DllHandle = LoadLibraryA(libPath.c_str());
 	if (!DllHandle) {
-
 		int errorCode = GetLastError();
 		throw std::runtime_error("Failed to load DLL. Error code: " + std::to_string(errorCode));
-
 	}
-
 #else
-
 	DllHandle = dlopen(libPath.c_str(), RTLD_LAZY);
-	if (!DllHandle) throw std::runtime_error("Failed to load dylib: " + std::string(dlerror()));
-
+	if (!DllHandle) {
+		throw std::runtime_error("Failed to load dylib: " + std::string(dlerror()));
+	}
 #endif
 
 	// Load function pointers
@@ -133,8 +111,6 @@ iamaiAI::~iamaiAI() {
 			DllHandle = nullptr;
 
 		}
-
-		if (!TempFilePath.IsEmpty()) IFileManager::Get().Delete(*TempFilePath);
 
 		disposed = true;
 

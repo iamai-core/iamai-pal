@@ -43,9 +43,6 @@ private:
 
 	void LoadDLL();
 
-	FString SaveTempModelFile(UGGUFModelAsset* model);
-	FString TempFilePath;
-
 	LibHandle DllHandle;
 	void* ctx = nullptr;
 

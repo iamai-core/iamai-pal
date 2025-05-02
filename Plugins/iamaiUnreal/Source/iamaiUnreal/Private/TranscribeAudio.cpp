@@ -21,6 +21,8 @@ UTranscribeAudio* UTranscribeAudio::Transcribe(UAIWrapper* AIWrapper, UiamaiVoic
 }
 
 
+
+
 void UTranscribeAudio::Activate() {
 
 	if (!m_aiWrapper || !m_iamaiVoiceInput) {
@@ -35,9 +37,13 @@ void UTranscribeAudio::Activate() {
 		TArray<float> pcmf32 = m_iamaiVoiceInput->GetAndClearAudioData();
 		FString TranscribedText = m_aiWrapper->Transcribe(pcmf32.GetData(), pcmf32.Num(), m_iamaiVoiceInput->fVoiceSensitivity);
 
-		Async(EAsyncExecution::TaskGraphMainThread, [this, TranscribedText]() {
 
-			OnTextTranscribed.Broadcast(!TranscribedText.IsEmpty(), TranscribedText);
+		FOnTextTranscribed DelegateCopy = OnTextTranscribed;
+
+		Async(EAsyncExecution::TaskGraphMainThread, [this, DelegateCopy, TranscribedText]() {
+
+			if (DelegateCopy.IsBound()) DelegateCopy.Broadcast(!TranscribedText.IsEmpty(), TranscribedText);
+			
 			});
 
 		});

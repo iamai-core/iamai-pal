@@ -2,7 +2,7 @@
 
 #include "Async/Async.h"
 
-UInitializeAI* UInitializeAI::CreateInitializeAll(UGGUFModelAsset* IamaiModel, const FString& WhisperModel) {
+UInitializeAI* UInitializeAI::CreateInitializeAll(UGGUFModelAsset* IamaiModel, UBinModelAsset* WhisperModel) {
 
 	UInitializeAI* Node = NewObject<UInitializeAI>();
 
@@ -53,24 +53,24 @@ UInitializeAI* UInitializeAI::InitializeIamai(UAIWrapper* Wrapper, UGGUFModelAss
 
 }
 
-UInitializeAI* UInitializeAI::CreateInitializeWhisper(const FString& WhisperModel, int threads) {
+UInitializeAI* UInitializeAI::CreateInitializeWhisper(UBinModelAsset* model, int threads) {
 
 	UInitializeAI* Node = NewObject<UInitializeAI>();
 
-	Node->m_whisperModel = WhisperModel;
+	Node->m_whisperModel = model;
 	Node->m_whisperThreads = threads;
 
 	return Node;
 
 }
 
-UInitializeAI* UInitializeAI::InitializeWhisper(UAIWrapper* Wrapper, const FString& WhisperModel, int threads) {
+UInitializeAI* UInitializeAI::InitializeWhisper(UAIWrapper* Wrapper, UBinModelAsset* model, int threads) {
 
 	if (!Wrapper) return nullptr;
 
 	UInitializeAI* Node = NewObject<UInitializeAI>();
 
-	Node->m_whisperModel = WhisperModel;
+	Node->m_whisperModel = model;
 	Node->m_aiWrapper = Wrapper;
 	Node->m_whisperThreads = threads;
 
@@ -97,15 +97,15 @@ void UInitializeAI::Activate() {
 				else bIamaiModel = m_aiWrapper->DefaultInitializeIamai(m_iamaiModel);
 
 			}
-			if (!m_whisperModel.IsEmpty()) bWhisperModel = m_aiWrapper->InitializeWhisper(m_whisperModel, m_whisperThreads);
+			if (m_whisperModel) bWhisperModel = m_aiWrapper->InitializeWhisper(m_whisperModel, m_whisperThreads);
 
 		}
 
 		Async(EAsyncExecution::TaskGraphMainThread, [this, bWrapper, bIamaiModel, bWhisperModel]() {
 
 			if (!bWrapper) UE_LOG(LogTemp, Error, TEXT("Failed to create wrapper!"));
-			//if (!bIamaiModel) UE_LOG(LogTemp, Error, TEXT("Failed to initialize Iamai AI with model: %s"), *m_iamaiModel);
-			if (!bWhisperModel) UE_LOG(LogTemp, Error, TEXT("Failed to initialize Whisper AI with model: %s"), *m_whisperModel);
+			if (!bIamaiModel) UE_LOG(LogTemp, Error, TEXT("Failed to initialize Iamai AI with model!"));
+			if (!bWhisperModel) UE_LOG(LogTemp, Error, TEXT("Failed to initialize Whisper AI with model!"));
 
 			OnCompleted.Broadcast(bWrapper && bIamaiModel && bWhisperModel, (bWrapper) ? m_aiWrapper : nullptr);
 

@@ -6,11 +6,8 @@
 /NAME:"UnrealEditor-iamaiUnreal-Win64-DebugGame.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"C:\Users\Collin\Documents\Repos\iamai-pal\Intermediate\Build\Win64\x64\testEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.InclOrderUnreal5_3.h.obj"
-"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnreal\Module.iamaiUnreal.cpp.obj"
-"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnreal\GGUFModelAsset.cpp.obj"
-"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnreal\iamaiAI.cpp.obj"
-"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnreal\GGUFModelAsset.gen.cpp.obj"
-"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnreal\iamaiUnreal.init.gen.cpp.obj"
-"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnreal\Default.rc2.res"
-/OUT:"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnreal\UnrealEditor-iamaiUnreal-Win64-DebugGame.lib"
+"C:\Users\Collin\Documents\Repos\iamai-unreal\Intermediate\Build\Win64\x64\iamaiUnrealPluginEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h.obj"
+"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnreal\Module.iamaiUnreal.cpp.obj"
+"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnreal\GGUFModelAsset.cpp.obj"
+"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnreal\Default.rc2.res"
+/OUT:"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnreal\UnrealEditor-iamaiUnreal-Win64-DebugGame.lib"

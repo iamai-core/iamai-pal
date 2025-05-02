@@ -6,6 +6,7 @@
 #include <string>
 #include <memory>
 #include <mutex>
+#include "BinModelAsset.h"
 
 #if PLATFORM_WINDOWS
 
@@ -25,7 +26,7 @@ class IAMAIUNREAL_API WhisperAI {
 
 public:
 
-	WhisperAI(const std::string& modelPath, int threads = 1);
+	WhisperAI(UBinModelAsset* model, int threads = 1);
 	~WhisperAI();
 
 	WhisperAI(const WhisperAI&) = delete;

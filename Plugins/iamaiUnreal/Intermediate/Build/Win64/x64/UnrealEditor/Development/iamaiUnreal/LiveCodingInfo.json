@@ -2,7 +2,11 @@
 	"RemapUnityFiles": 
 	{
 		"Module.iamaiUnreal.cpp.obj": [
+			"PerModuleInline.gen.cpp.obj",
+			"GenerateText.cpp.obj",
+			"iamaiUnreal.cpp.obj",
 			"AIWrapper.gen.cpp.obj",
+			"BinModelAsset.gen.cpp.obj",
 			"GenerateText.gen.cpp.obj",
 			"GGUFModelAsset.gen.cpp.obj",
 			"iamaiUnreal.init.gen.cpp.obj",
@@ -10,12 +14,10 @@
 			"InitializeAI.gen.cpp.obj",
 			"LoopingTranscribeAudio.gen.cpp.obj",
 			"TranscribeAudio.gen.cpp.obj",
-			"PerModuleInline.gen.cpp.obj",
 			"AIWrapper.cpp.obj",
-			"GenerateText.cpp.obj",
+			"BinModelAsset.cpp.obj",
 			"GGUFModelAsset.cpp.obj",
 			"iamaiAI.cpp.obj",
-			"iamaiUnreal.cpp.obj",
 			"iamaiVoiceInput.cpp.obj",
 			"InitializeAI.cpp.obj",
 			"LoopingTranscribeAudio.cpp.obj",

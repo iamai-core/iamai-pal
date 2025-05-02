@@ -1,7 +1,8 @@
-C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Source\iamaiUnreal\Public\GGUFModelAsset.h
-C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Source\iamaiUnreal\Public\AIWrapper.h
-C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Source\iamaiUnreal\Public\InitializeAI.h
-C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Source\iamaiUnreal\Public\TranscribeAudio.h
-C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Source\iamaiUnreal\Public\iamaiVoiceInput.h
-C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Source\iamaiUnreal\Public\GenerateText.h
-C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Source\iamaiUnreal\Public\LoopingTranscribeAudio.h
+C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Source\iamaiUnreal\Public\GenerateText.h
+C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Source\iamaiUnreal\Public\LoopingTranscribeAudio.h
+C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Source\iamaiUnreal\Public\TranscribeAudio.h
+C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Source\iamaiUnreal\Public\AIWrapper.h
+C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Source\iamaiUnreal\Public\BinModelAsset.h
+C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Source\iamaiUnreal\Public\GGUFModelAsset.h
+C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Source\iamaiUnreal\Public\InitializeAI.h
+C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Source\iamaiUnreal\Public\iamaiVoiceInput.h

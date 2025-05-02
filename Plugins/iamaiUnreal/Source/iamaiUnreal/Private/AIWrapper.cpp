@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "AIWrapper.h"
+#include "fstream"
 
 UAIWrapper::UAIWrapper() :
 	iamaiInstance(nullptr),
@@ -43,11 +43,11 @@ bool UAIWrapper::InitializeIamai(UGGUFModelAsset* model, int size, int tokens, i
 
 }
 
-bool UAIWrapper::InitializeWhisper(const FString& ModelName, int threads) {
+bool UAIWrapper::InitializeWhisper(UBinModelAsset* model, int threads) {
 
 	try {
 
-		whisperInstance = std::make_unique<WhisperAI>(TCHAR_TO_UTF8(*ModelName));
+		whisperInstance = std::make_unique<WhisperAI>(model);
 		return true;
 
 	} catch (const std::exception& e) {
@@ -90,16 +90,33 @@ void UAIWrapper::SetMaxTokens(int32 MaxTokens) {
 
 std::vector<float> clean_pcm(const std::vector<float>& input, float threshold) {
 
+	const int inputRate = 48000;
+	const int outputRate = 16000;
+	const int channels = 2;
+	const float ratio = static_cast<float>(inputRate) / outputRate;
+
 	std::vector<float> output;
-	float average, sum;
+	size_t numFrames = input.size() / channels;
 
-	for (size_t i = 0; i + 2 < input.size(); i += 3) {
+	for (size_t i = 0; i < static_cast<size_t>(numFrames / ratio); ++i) {
+		float srcIndex = i * ratio;
+		size_t frameIndex = static_cast<size_t>(srcIndex);
 
-		sum = input[i] + input[i + 1] + input[i + 2];
-		average = std::clamp(sum / 3.0f, -1.0f, 1.0f);
+		if (frameIndex + 1 >= numFrames) break;
 
-		if (average >= threshold) output.push_back(average);
+		// Linear interpolation for smooth resample
+		float t = srcIndex - frameIndex;
 
+		float left0 = input[frameIndex * 2];
+		float right0 = input[frameIndex * 2 + 1];
+		float left1 = input[(frameIndex + 1) * 2];
+		float right1 = input[(frameIndex + 1) * 2 + 1];
+
+		float sample0 = 0.5f * (left0 + right0);
+		float sample1 = 0.5f * (left1 + right1);
+		float interp = sample0 + (sample1 - sample0) * t;
+
+		output.push_back(interp);
 	}
 
 	return output;
@@ -108,12 +125,12 @@ std::vector<float> clean_pcm(const std::vector<float>& input, float threshold) {
 
 FString UAIWrapper::Transcribe(float* AudioData, int SampleCount, float threshold) {
 
-	if (!iamaiInstance) return "";
+	if (!whisperInstance) return "";
 
-	std::vector<float> downsized = clean_pcm(std::vector<float>(AudioData, AudioData + SampleCount), threshold);
-	if (downsized.empty()) return "";
+	std::vector<float> cleaned = clean_pcm(std::vector<float>(AudioData, AudioData + SampleCount), threshold);
+	if (cleaned.empty()) return "";
 
-	std::string Transcript = whisperInstance->Transcribe(downsized.data(), downsized.size());
+	std::string Transcript = whisperInstance->Transcribe(cleaned.data(), cleaned.size());
 
 	return FString(UTF8_TO_TCHAR(Transcript.c_str()));
 

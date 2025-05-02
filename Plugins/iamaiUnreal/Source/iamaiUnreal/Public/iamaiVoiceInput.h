@@ -1,46 +1,52 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
+#include "AudioCaptureCore.h"
 #include "Components/SynthComponent.h"
 
 #include "iamaiVoiceInput.generated.h"
 
+#define SYNTHCOMPONENT_EX_OSCILATOR_ENABLED 1
+
 UCLASS(ClassGroup = Synth, meta = (BlueprintSpawnableComponent))
 class IAMAIUNREAL_API UiamaiVoiceInput : public USynthComponent {
 
-    GENERATED_BODY()
+	GENERATED_BODY()
 
 public:
 
-    UFUNCTION(BlueprintCallable, Category = "iamai core")
-    void StartCapturingAudio();
+	virtual bool Init(int32& SampleRate) override;
 
-    UFUNCTION(BlueprintCallable, Category = "iamai core")
-    void StopCapturingAudio();
+	virtual int32 OnGenerateAudio(float* OutAudio, int32 NumSamples) override;
+	virtual void BeginDestroy() override;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Voice Input")
-    bool bRecordOnStartup = false;
+	UFUNCTION(BlueprintCallable, Category = "iamai core")
+	void StartCapturingAudio();
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Voice Input", meta = (ClampMin = "0.0", ClampMax = "1.0", UIMin = "0.0", UIMax = "1.0"))
-    float fVoiceSensitivity = 0.15f;
+	UFUNCTION(BlueprintCallable, Category = "iamai core")
+	void StopCapturingAudio();
 
-    TArray<float> GetAndClearAudioData() {
-        return std::move(m_pcmData);
-    }
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Voice Input")
+	bool bRecordOnStartup = false;
 
-    TArray<float>& GetAudioData() {
-        return m_pcmData;
-    }
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Voice Input", meta = (ClampMin = "0.0", ClampMax = "1.0", UIMin = "0.0", UIMax = "1.0"))
+	float fVoiceSensitivity = 0.15f;
+
+	TArray<float> GetAndClearAudioData() {
+		return std::move(m_pcmData);
+	}
+
+	TArray<float>& GetAudioData() {
+		return m_pcmData;
+	}
 
 protected:
 
-    //virtual bool Init(int32& SampleRate) override;
-    //virtual int32 OnGenerateAudio(float* OutAudio, int32 NumSamples) override;
-    //virtual void OnBeginGenerate() override;
-    //virtual void OnEndGenerate() override;
+	Audio::FAudioCaptureSynth* CaptureSynth;
 
-    TArray<float> m_pcmData;
-
-    //Audio::FAudioCaptureSynth CaptureSynth;
+	TArray<float> m_pcmData;
+	bool bIsCapturingAudio = false;
+	bool bIsStreamOpen = false;
 
 };

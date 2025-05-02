@@ -25,7 +25,7 @@ class IAMAIUNREAL_API UInitializeAI : public UBlueprintAsyncActionBase {
 public:
 
 	UFUNCTION(BlueprintCallable, meta = (BlueprintInternalUseOnly = "true", DisplayName = "Create and Initialize iamai and whisper", Category = "iamai core"))
-	static UInitializeAI* CreateInitializeAll(UGGUFModelAsset* IamaiModel, const FString& WhisperModel);
+	static UInitializeAI* CreateInitializeAll(UGGUFModelAsset* IamaiModel, UBinModelAsset* WhisperModel);
 
 	UFUNCTION(BlueprintCallable, meta = (BlueprintInternalUseOnly = "true", DisplayName = "Create and Initialize iamai", Category = "iamai core"))
 	static UInitializeAI* CreateInitializeIamai(UGGUFModelAsset* IamaiModel);
@@ -37,10 +37,10 @@ public:
 	static UInitializeAI* InitializeIamai(UAIWrapper* Wrapper, UGGUFModelAsset* IamaiModel, int tokens = 512, int batch = 1, int threads = 1);
 
 	UFUNCTION(BlueprintCallable, meta = (BlueprintInternalUseOnly = "true", DisplayName = "Create and Initialize whisper", Category = "iamai core"))
-	static UInitializeAI* CreateInitializeWhisper( const FString& WhisperModel, int threads = 1);
+	static UInitializeAI* CreateInitializeWhisper(UBinModelAsset* model, int threads = 1);
 
 	UFUNCTION(BlueprintCallable, meta = (BlueprintInternalUseOnly = "true", DisplayName = "Initialize whisper", Category = "iamai core"))
-	static UInitializeAI* InitializeWhisper(UAIWrapper* Wrapper, const FString& WhisperModel, int threads = 1);
+	static UInitializeAI* InitializeWhisper(UAIWrapper* Wrapper, UBinModelAsset* model, int threads = 1);
 
 	UPROPERTY(BlueprintAssignable)
 	FAIWraperInitialized OnCompleted;
@@ -50,7 +50,7 @@ protected:
 	virtual void Activate() override;
 
 	UGGUFModelAsset* m_iamaiModel;
-	FString m_whisperModel;
+	UBinModelAsset* m_whisperModel;
 	UAIWrapper* m_aiWrapper = nullptr;
 
 	int m_size = -1;

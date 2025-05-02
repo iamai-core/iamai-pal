@@ -1,12 +1,12 @@
-"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp"
-/FI"C:\Users\Collin\Documents\Repos\iamai-pal\Intermediate\Build\Win64\x64\testEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.InclOrderUnreal5_3.h"
-/FI"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\Definitions.iamaiUnrealEditor.h"
-/Yu"C:\Users\Collin\Documents\Repos\iamai-pal\Intermediate\Build\Win64\x64\testEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.InclOrderUnreal5_3.h"
-/Fp"C:\Users\Collin\Documents\Repos\iamai-pal\Intermediate\Build\Win64\x64\testEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.InclOrderUnreal5_3.h.pch"
-/Fo"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.obj"
-/experimental:log "C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.sarif"
-/sourceDependencies "C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.dep.json"
-@"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\iamaiUnrealEditor.Shared.rsp"
+"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp"
+/FI"C:\Users\Collin\Documents\Repos\iamai-unreal\Intermediate\Build\Win64\x64\iamaiUnrealPluginEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h"
+/FI"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\Definitions.iamaiUnrealEditor.h"
+/Yu"C:\Users\Collin\Documents\Repos\iamai-unreal\Intermediate\Build\Win64\x64\iamaiUnrealPluginEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h"
+/Fp"C:\Users\Collin\Documents\Repos\iamai-unreal\Intermediate\Build\Win64\x64\iamaiUnrealPluginEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h.pch"
+/Fo"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.obj"
+/experimental:log "C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.sarif"
+/sourceDependencies "C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.dep.json"
+@"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\iamaiUnrealEditor.Shared.rsp"
 /d2ssa-cfg-question-
 /Zc:inline
 /nologo
