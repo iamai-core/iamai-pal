@@ -2,7 +2,7 @@
 /D_WIN64
 /l 0x409
 /I "."
-/I "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.38.33130\INCLUDE"
+/I "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.42.34433\INCLUDE"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
@@ -85,5 +85,5 @@
 /DPROJECT_COPYRIGHT_STRING="© 2025 iamai-core. All rights reserved."
 /DPROJECT_PRODUCT_NAME=N.O.V.A
 /DPROJECT_PRODUCT_IDENTIFIER=test
-/fo "C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\Default.rc2.res"
+/fo "C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\Default.rc2.res"
 "..\Build\Windows\Resources\Default.rc2"

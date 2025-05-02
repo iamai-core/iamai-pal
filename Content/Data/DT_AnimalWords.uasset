@@ -1,0 +1,8 @@
+// Data Table Structure
+Struct "FAnimalWordData"
+{
+    FString "Word" // The animal name
+    FString "Phonetic" // How to pronounce it
+    FSoftObjectPath "ImagePath" // Reference to the animal image
+    FSoftObjectPath "SoundPath" // Reference to the pronunciation sound file
+} 

@@ -21,10 +21,6 @@
 		{
 			"Name": "TextToSpeech",
 			"Enabled": true
-		},
-		{
-			"Name": "BlueprintColorPicker",
-			"Enabled": true
 		}
 	]
 }
