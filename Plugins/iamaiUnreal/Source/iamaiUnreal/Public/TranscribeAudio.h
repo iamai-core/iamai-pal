@@ -20,7 +20,7 @@ public:
 
 	UTranscribeAudio();
 
-	UFUNCTION(BlueprintCallable, meta = (BlueprintInternalUseOnly = "true", DisplayName = "Transcribe Audio", Category = "Iamai Core"))
+	UFUNCTION(BlueprintCallable, meta = (BlueprintInternalUseOnly = "true", DisplayName = "Transcribe Audio", Category = "iamai"))
 	static UTranscribeAudio* Transcribe( UAIWrapper* AIWrapper, UiamaiVoiceInput* iamaiVoiceInput);
 
 	UPROPERTY(BlueprintAssignable)

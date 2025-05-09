@@ -13,8 +13,6 @@
 #define UE_ENABLE_INCLUDE_ORDER_DEPRECATED_IN_5_5 0
 #define UE_PROJECT_NAME iamaiUnrealPlugin
 #define UE_TARGET_NAME iamaiUnrealPluginEditor
-#define PLATFORM_EXCEPTIONS_DISABLED 0
-#define NOMINMAX 1
 #define UE_MODULE_NAME "iamaiUnrealEditor"
 #define UE_PLUGIN_NAME "iamaiUnreal"
 #define IMPLEMENT_ENCRYPTION_KEY_REGISTRATION() 

@@ -6,6 +6,7 @@
 			"BinModelAsset.gen.cpp.obj",
 			"GenerateText.gen.cpp.obj",
 			"GGUFModelAsset.gen.cpp.obj",
+			"iamaiConfig.gen.cpp.obj",
 			"iamaiUnreal.init.gen.cpp.obj",
 			"iamaiVoiceInput.gen.cpp.obj",
 			"InitializeAI.gen.cpp.obj",

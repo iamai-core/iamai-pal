@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "iamaiUnreal/Public/InitializeAI.h"
+#include "iamaiUnreal/Public/iamaiConfig.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeInitializeAI() {}
 
@@ -17,6 +18,7 @@ IAMAIUNREAL_API UClass* Z_Construct_UClass_UGGUFModelAsset_NoRegister();
 IAMAIUNREAL_API UClass* Z_Construct_UClass_UInitializeAI();
 IAMAIUNREAL_API UClass* Z_Construct_UClass_UInitializeAI_NoRegister();
 IAMAIUNREAL_API UFunction* Z_Construct_UDelegateFunction_iamaiUnreal_AIWraperInitialized__DelegateSignature();
+IAMAIUNREAL_API UScriptStruct* Z_Construct_UScriptStruct_FiamaiConfig();
 UPackage* Z_Construct_UPackage__Script_iamaiUnreal();
 // End Cross Module References
 
@@ -87,7 +89,7 @@ struct Z_Construct_UFunction_UInitializeAI_CreateInitializeAll_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
-		{ "Category", "iamai core" },
+		{ "Category", "iamai" },
 		{ "DisplayName", "Create and Initialize iamai and whisper" },
 		{ "ModuleRelativePath", "Public/InitializeAI.h" },
 	};
@@ -140,7 +142,7 @@ struct Z_Construct_UFunction_UInitializeAI_CreateInitializeIamai_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
-		{ "Category", "iamai core" },
+		{ "Category", "iamai" },
 		{ "DisplayName", "Create and Initialize iamai" },
 		{ "ModuleRelativePath", "Public/InitializeAI.h" },
 	};
@@ -184,45 +186,29 @@ struct Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Stati
 	struct InitializeAI_eventCreateInitializeIamaiParamaters_Parms
 	{
 		UGGUFModelAsset* IamaiModel;
-		int32 size;
-		int32 tokens;
-		int32 batch;
-		int32 threads;
+		FiamaiConfig config;
 		UInitializeAI* ReturnValue;
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
-		{ "Category", "iamai core" },
-		{ "CPP_Default_batch", "8192" },
-		{ "CPP_Default_size", "8192" },
-		{ "CPP_Default_threads", "1" },
-		{ "CPP_Default_tokens", "512" },
+		{ "Category", "iamai" },
 		{ "DisplayName", "Create and Initialize iamai with Paramaters" },
 		{ "ModuleRelativePath", "Public/InitializeAI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_IamaiModel;
-	static const UECodeGen_Private::FIntPropertyParams NewProp_size;
-	static const UECodeGen_Private::FIntPropertyParams NewProp_tokens;
-	static const UECodeGen_Private::FIntPropertyParams NewProp_batch;
-	static const UECodeGen_Private::FIntPropertyParams NewProp_threads;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_config;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Statics::NewProp_IamaiModel = { "IamaiModel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventCreateInitializeIamaiParamaters_Parms, IamaiModel), Z_Construct_UClass_UGGUFModelAsset_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Statics::NewProp_size = { "size", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventCreateInitializeIamaiParamaters_Parms, size), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Statics::NewProp_tokens = { "tokens", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventCreateInitializeIamaiParamaters_Parms, tokens), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Statics::NewProp_batch = { "batch", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventCreateInitializeIamaiParamaters_Parms, batch), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Statics::NewProp_threads = { "threads", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventCreateInitializeIamaiParamaters_Parms, threads), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Statics::NewProp_config = { "config", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventCreateInitializeIamaiParamaters_Parms, config), Z_Construct_UScriptStruct_FiamaiConfig, METADATA_PARAMS(0, nullptr) }; // 3488929887
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventCreateInitializeIamaiParamaters_Parms, ReturnValue), Z_Construct_UClass_UInitializeAI_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Statics::NewProp_IamaiModel,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Statics::NewProp_size,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Statics::NewProp_tokens,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Statics::NewProp_batch,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Statics::NewProp_threads,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Statics::NewProp_config,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters_Statics::PropPointers) < 2048);
@@ -240,13 +226,10 @@ UFunction* Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters()
 DEFINE_FUNCTION(UInitializeAI::execCreateInitializeIamaiParamaters)
 {
 	P_GET_OBJECT(UGGUFModelAsset,Z_Param_IamaiModel);
-	P_GET_PROPERTY(FIntProperty,Z_Param_size);
-	P_GET_PROPERTY(FIntProperty,Z_Param_tokens);
-	P_GET_PROPERTY(FIntProperty,Z_Param_batch);
-	P_GET_PROPERTY(FIntProperty,Z_Param_threads);
+	P_GET_STRUCT(FiamaiConfig,Z_Param_config);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	*(UInitializeAI**)Z_Param__Result=UInitializeAI::CreateInitializeIamaiParamaters(Z_Param_IamaiModel,Z_Param_size,Z_Param_tokens,Z_Param_batch,Z_Param_threads);
+	*(UInitializeAI**)Z_Param__Result=UInitializeAI::CreateInitializeIamaiParamaters(Z_Param_IamaiModel,Z_Param_config);
 	P_NATIVE_END;
 }
 // End Class UInitializeAI Function CreateInitializeIamaiParamaters
@@ -263,7 +246,7 @@ struct Z_Construct_UFunction_UInitializeAI_CreateInitializeWhisper_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
-		{ "Category", "iamai core" },
+		{ "Category", "iamai" },
 		{ "CPP_Default_threads", "1" },
 		{ "DisplayName", "Create and Initialize whisper" },
 		{ "ModuleRelativePath", "Public/InitializeAI.h" },
@@ -313,43 +296,28 @@ struct Z_Construct_UFunction_UInitializeAI_InitializeIamai_Statics
 	{
 		UAIWrapper* Wrapper;
 		UGGUFModelAsset* IamaiModel;
-		int32 tokens;
-		int32 batch;
-		int32 threads;
 		UInitializeAI* ReturnValue;
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
-		{ "Category", "iamai core" },
-		{ "CPP_Default_batch", "1" },
-		{ "CPP_Default_threads", "1" },
-		{ "CPP_Default_tokens", "512" },
+		{ "Category", "iamai" },
 		{ "DisplayName", "Initialize iamai" },
 		{ "ModuleRelativePath", "Public/InitializeAI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Wrapper;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_IamaiModel;
-	static const UECodeGen_Private::FIntPropertyParams NewProp_tokens;
-	static const UECodeGen_Private::FIntPropertyParams NewProp_batch;
-	static const UECodeGen_Private::FIntPropertyParams NewProp_threads;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UInitializeAI_InitializeIamai_Statics::NewProp_Wrapper = { "Wrapper", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventInitializeIamai_Parms, Wrapper), Z_Construct_UClass_UAIWrapper_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UInitializeAI_InitializeIamai_Statics::NewProp_IamaiModel = { "IamaiModel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventInitializeIamai_Parms, IamaiModel), Z_Construct_UClass_UGGUFModelAsset_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UInitializeAI_InitializeIamai_Statics::NewProp_tokens = { "tokens", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventInitializeIamai_Parms, tokens), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UInitializeAI_InitializeIamai_Statics::NewProp_batch = { "batch", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventInitializeIamai_Parms, batch), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UInitializeAI_InitializeIamai_Statics::NewProp_threads = { "threads", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventInitializeIamai_Parms, threads), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UInitializeAI_InitializeIamai_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventInitializeIamai_Parms, ReturnValue), Z_Construct_UClass_UInitializeAI_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UInitializeAI_InitializeIamai_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_InitializeIamai_Statics::NewProp_Wrapper,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_InitializeIamai_Statics::NewProp_IamaiModel,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_InitializeIamai_Statics::NewProp_tokens,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_InitializeIamai_Statics::NewProp_batch,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_InitializeIamai_Statics::NewProp_threads,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_InitializeIamai_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UInitializeAI_InitializeIamai_Statics::PropPointers) < 2048);
@@ -368,15 +336,71 @@ DEFINE_FUNCTION(UInitializeAI::execInitializeIamai)
 {
 	P_GET_OBJECT(UAIWrapper,Z_Param_Wrapper);
 	P_GET_OBJECT(UGGUFModelAsset,Z_Param_IamaiModel);
-	P_GET_PROPERTY(FIntProperty,Z_Param_tokens);
-	P_GET_PROPERTY(FIntProperty,Z_Param_batch);
-	P_GET_PROPERTY(FIntProperty,Z_Param_threads);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	*(UInitializeAI**)Z_Param__Result=UInitializeAI::InitializeIamai(Z_Param_Wrapper,Z_Param_IamaiModel,Z_Param_tokens,Z_Param_batch,Z_Param_threads);
+	*(UInitializeAI**)Z_Param__Result=UInitializeAI::InitializeIamai(Z_Param_Wrapper,Z_Param_IamaiModel);
 	P_NATIVE_END;
 }
 // End Class UInitializeAI Function InitializeIamai
+
+// Begin Class UInitializeAI Function InitializeIamaiParamaters
+struct Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics
+{
+	struct InitializeAI_eventInitializeIamaiParamaters_Parms
+	{
+		UAIWrapper* Wrapper;
+		UGGUFModelAsset* IamaiModel;
+		FiamaiConfig config;
+		UInitializeAI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "iamai" },
+		{ "DisplayName", "Initialize iamai with paramaters" },
+		{ "ModuleRelativePath", "Public/InitializeAI.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Wrapper;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_IamaiModel;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_config;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::NewProp_Wrapper = { "Wrapper", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventInitializeIamaiParamaters_Parms, Wrapper), Z_Construct_UClass_UAIWrapper_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::NewProp_IamaiModel = { "IamaiModel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventInitializeIamaiParamaters_Parms, IamaiModel), Z_Construct_UClass_UGGUFModelAsset_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::NewProp_config = { "config", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventInitializeIamaiParamaters_Parms, config), Z_Construct_UScriptStruct_FiamaiConfig, METADATA_PARAMS(0, nullptr) }; // 3488929887
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InitializeAI_eventInitializeIamaiParamaters_Parms, ReturnValue), Z_Construct_UClass_UInitializeAI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::NewProp_Wrapper,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::NewProp_IamaiModel,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::NewProp_config,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UInitializeAI, nullptr, "InitializeIamaiParamaters", nullptr, nullptr, Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::PropPointers), sizeof(Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::InitializeAI_eventInitializeIamaiParamaters_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::InitializeAI_eventInitializeIamaiParamaters_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UInitializeAI::execInitializeIamaiParamaters)
+{
+	P_GET_OBJECT(UAIWrapper,Z_Param_Wrapper);
+	P_GET_OBJECT(UGGUFModelAsset,Z_Param_IamaiModel);
+	P_GET_STRUCT(FiamaiConfig,Z_Param_config);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UInitializeAI**)Z_Param__Result=UInitializeAI::InitializeIamaiParamaters(Z_Param_Wrapper,Z_Param_IamaiModel,Z_Param_config);
+	P_NATIVE_END;
+}
+// End Class UInitializeAI Function InitializeIamaiParamaters
 
 // Begin Class UInitializeAI Function InitializeWhisper
 struct Z_Construct_UFunction_UInitializeAI_InitializeWhisper_Statics
@@ -391,7 +415,7 @@ struct Z_Construct_UFunction_UInitializeAI_InitializeWhisper_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
-		{ "Category", "iamai core" },
+		{ "Category", "iamai" },
 		{ "CPP_Default_threads", "1" },
 		{ "DisplayName", "Initialize whisper" },
 		{ "ModuleRelativePath", "Public/InitializeAI.h" },
@@ -448,6 +472,7 @@ void UInitializeAI::StaticRegisterNativesUInitializeAI()
 		{ "CreateInitializeIamaiParamaters", &UInitializeAI::execCreateInitializeIamaiParamaters },
 		{ "CreateInitializeWhisper", &UInitializeAI::execCreateInitializeWhisper },
 		{ "InitializeIamai", &UInitializeAI::execInitializeIamai },
+		{ "InitializeIamaiParamaters", &UInitializeAI::execInitializeIamaiParamaters },
 		{ "InitializeWhisper", &UInitializeAI::execInitializeWhisper },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -461,14 +486,8 @@ struct Z_Construct_UClass_UInitializeAI_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * Initialize the AI model with the given model name\n * @param ModelName - Name of the model directory to load\n * @return A new AI wrapper object\n */" },
-#endif
 		{ "IncludePath", "InitializeAI.h" },
 		{ "ModuleRelativePath", "Public/InitializeAI.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Initialize the AI model with the given model name\n@param ModelName - Name of the model directory to load\n@return A new AI wrapper object" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnCompleted_MetaData[] = {
 		{ "ModuleRelativePath", "Public/InitializeAI.h" },
@@ -478,12 +497,13 @@ struct Z_Construct_UClass_UInitializeAI_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UInitializeAI_CreateInitializeAll, "CreateInitializeAll" }, // 2634677057
-		{ &Z_Construct_UFunction_UInitializeAI_CreateInitializeIamai, "CreateInitializeIamai" }, // 2397496223
-		{ &Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters, "CreateInitializeIamaiParamaters" }, // 1235353666
-		{ &Z_Construct_UFunction_UInitializeAI_CreateInitializeWhisper, "CreateInitializeWhisper" }, // 3884607740
-		{ &Z_Construct_UFunction_UInitializeAI_InitializeIamai, "InitializeIamai" }, // 2981275647
-		{ &Z_Construct_UFunction_UInitializeAI_InitializeWhisper, "InitializeWhisper" }, // 1463299106
+		{ &Z_Construct_UFunction_UInitializeAI_CreateInitializeAll, "CreateInitializeAll" }, // 4142890049
+		{ &Z_Construct_UFunction_UInitializeAI_CreateInitializeIamai, "CreateInitializeIamai" }, // 3353612529
+		{ &Z_Construct_UFunction_UInitializeAI_CreateInitializeIamaiParamaters, "CreateInitializeIamaiParamaters" }, // 3244094538
+		{ &Z_Construct_UFunction_UInitializeAI_CreateInitializeWhisper, "CreateInitializeWhisper" }, // 986239469
+		{ &Z_Construct_UFunction_UInitializeAI_InitializeIamai, "InitializeIamai" }, // 353222426
+		{ &Z_Construct_UFunction_UInitializeAI_InitializeIamaiParamaters, "InitializeIamaiParamaters" }, // 2566122160
+		{ &Z_Construct_UFunction_UInitializeAI_InitializeWhisper, "InitializeWhisper" }, // 980374229
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -534,14 +554,14 @@ UInitializeAI::~UInitializeAI() {}
 // End Class UInitializeAI
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_pal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_InitializeAI_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_unreal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_InitializeAI_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UInitializeAI, UInitializeAI::StaticClass, TEXT("UInitializeAI"), &Z_Registration_Info_UClass_UInitializeAI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInitializeAI), 3061776252U) },
+		{ Z_Construct_UClass_UInitializeAI, UInitializeAI::StaticClass, TEXT("UInitializeAI"), &Z_Registration_Info_UClass_UInitializeAI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInitializeAI), 3924612149U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_pal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_InitializeAI_h_4014762329(TEXT("/Script/iamaiUnreal"),
-	Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_pal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_InitializeAI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_pal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_InitializeAI_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_unreal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_InitializeAI_h_854719081(TEXT("/Script/iamaiUnreal"),
+	Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_unreal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_InitializeAI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_unreal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_InitializeAI_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

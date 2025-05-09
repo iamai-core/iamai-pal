@@ -8,7 +8,5 @@
 /NODEFAULTLIB
 "C:\Users\Collin\Documents\Repos\iamai-unreal\Intermediate\Build\Win64\x64\iamaiUnrealPluginEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h.obj"
 "C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.obj"
-"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\BinModelFactory.cpp.obj"
-"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\GGUFModelFactory.cpp.obj"
 "C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\Default.rc2.res"
 /OUT:"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnrealEditor\UnrealEditor-iamaiUnrealEditor-Win64-DebugGame.lib"

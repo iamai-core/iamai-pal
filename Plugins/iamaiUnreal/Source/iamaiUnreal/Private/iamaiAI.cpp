@@ -1,6 +1,7 @@
 #include "iamaiAI.h"
 
 #include "Misc/Paths.h"
+#include "iamaiConfig.h"
 
 
 #if PLATFORM_WINDOWS
@@ -20,15 +21,21 @@ iamaiAI::iamaiAI(UGGUFModelAsset* model) {
 
 }
 
-iamaiAI::iamaiAI(UGGUFModelAsset* model, int size, int tokens, int batch, int threads) {
+iamaiAI::iamaiAI(UGGUFModelAsset* model, FiamaiConfig config) {
 
-	if (size <= 0 || tokens <= 0 || batch <= 0 || threads <= 0) throw std::invalid_argument("Size, tokens, batch, and threads must be greater than 0");
-	if (size < batch) throw std::invalid_argument("Size must be greater than or equal to batch");
+	if (config.Size <= 0) throw std::runtime_error("Invalid size parameter");
+	if (config.MaxTokens <= 0) throw std::runtime_error("Invalid tokens parameter");
+	if (config.Batch <= 0) throw std::runtime_error("Invalid batch parameter");
+	if (config.Threads <= 0) throw std::runtime_error("Invalid threads parameter");
+
+	if (config.TopK <= 0) throw std::runtime_error("Invalid top_k parameter");
+	if (config.TopP <= 0.0f || config.TopP > 1.0f) throw std::runtime_error("Invalid top_p parameter");
+	if (config.Temperature < 0.0f) throw std::runtime_error("Invalid temperature parameter");
 
 	LoadDLL();
 
 	FString path = FPaths::ProjectDir() / model->FilePath;
-	ctx = _fullInit(TCHAR_TO_UTF8(*path), size, tokens, batch, threads);
+	ctx = _fullInit(TCHAR_TO_UTF8(*path), config.Size, config.MaxTokens, config.Batch, config.Threads, config.TopK, config.TopP, config.Temperature, config.Seed);
 
 	if (!ctx) throw std::runtime_error("Failed to initialize iamai model");
 
@@ -68,6 +75,8 @@ void iamaiAI::LoadDLL() {
 	_fullInit = GetFunction<FullInitFunction>("FullInit");
 	_generate = GetFunction<GenerateFunction>("Generate");
 	_setMaxTokens = GetFunction<SetMaxTokensFunction>("SetMaxTokens");
+	_setPromptFormat = GetFunction<SetPromptFormatFunction>("SetPromptFormat");
+	_clearPromptFormat = GetFunction<ClearPromptFormatFunction>("ClearPromptFormat");
 	_free = GetFunction<FreeFunction>("Free");
 
 }

@@ -14,9 +14,8 @@
 
 #include "AIWrapper.generated.h"
 
-/**
- * Blueprint-friendly wrapper for the AI class
- */
+struct FiamaiConfig;
+
 UCLASS(BlueprintType, Blueprintable)
 class IAMAIUNREAL_API UAIWrapper : public UObject {
 
@@ -34,17 +33,25 @@ public:
 
 	/**
 	 * Initialize the Iamai AI with a specific model
-	 * @param ModelName - Name of the model directory to load
+	 * @param model - Name of the model directory to load
 	 * @return Whether initialization was successful
 	 */
 	bool DefaultInitializeIamai(UGGUFModelAsset* model);
 
 	/**
-	 * Initialize the Iamai AI with a specific model and parameters
-	 * @param ModelName - Name of the model directory to load
+	 * Initialize the Iamai AI with a specific model
+	 * @param model - Name of the model directory to load
 	 * @return Whether initialization was successful
 	 */
-	bool InitializeIamai(UGGUFModelAsset* model, int size = 8192, int tokens = 512, int batch = 512, int threads = 1);
+	bool InitializeIamai(UGGUFModelAsset* model);
+
+	/**
+	 * Initialize the Iamai AI with a specific model and parameters
+	 * @param model - Name of the model directory to load
+	 * @param config - Name of the model directory to load
+	 * @return Whether initialization was successful
+	 */
+	bool InitializeIamai(UGGUFModelAsset* model, FiamaiConfig config);
 
 
 	/**
@@ -53,6 +60,9 @@ public:
 	 * @return Whether initialization was successful
 	 */
 	bool InitializeWhisper(UBinModelAsset* model, int threads = 1);
+
+
+	// iamai
 
 
 	/**
@@ -67,9 +77,18 @@ public:
 	 * Set the maximum number of tokens to generate
 	 * @param MaxTokens - Maximum number of tokens
 	 */
-	UFUNCTION(BlueprintCallable, Category = "iamai AI")
+	UFUNCTION(BlueprintCallable, Category = "iamai")
 	void SetMaxTokens(int32 MaxTokens);
 
+	UFUNCTION(BlueprintCallable, Category = "iamai")
+	void SetPromptFormat(const FString& Format);
+
+	UFUNCTION(BlueprintCallable, Category = "iamai")
+	void ClearPromptFormat();
+
+
+
+	// Whisper
 
 	/**
 	* Transcribe audio to text from float array

@@ -3,4 +3,6 @@
 #include "C:/Users/Collin/Documents/Repos/iamai-unreal/Plugins/iamaiUnreal/Intermediate/Build/Win64/UnrealEditor/Inc/iamaiUnrealEditor/UHT/GGUFModelFactory.gen.cpp"
 #include "C:/Users/Collin/Documents/Repos/iamai-unreal/Plugins/iamaiUnreal/Intermediate/Build/Win64/UnrealEditor/Inc/iamaiUnrealEditor/UHT/iamaiUnrealEditor.init.gen.cpp"
 #include "C:/Users/Collin/Documents/Repos/iamai-unreal/Plugins/iamaiUnreal/Intermediate/Build/Win64/x64/UnrealEditor/DebugGame/iamaiUnrealEditor/PerModuleInline.gen.cpp"
+#include "C:/Users/Collin/Documents/Repos/iamai-unreal/Plugins/iamaiUnreal/Source/iamaiUnrealEditor/Private/BinModelFactory.cpp"
+#include "C:/Users/Collin/Documents/Repos/iamai-unreal/Plugins/iamaiUnreal/Source/iamaiUnrealEditor/Private/GGUFModelFactory.cpp"
 #include "C:/Users/Collin/Documents/Repos/iamai-unreal/Plugins/iamaiUnreal/Source/iamaiUnrealEditor/Private/iamaiUnrealEditor.cpp"

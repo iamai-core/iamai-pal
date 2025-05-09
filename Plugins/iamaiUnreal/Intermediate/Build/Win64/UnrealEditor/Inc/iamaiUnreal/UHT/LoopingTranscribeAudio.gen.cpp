@@ -151,7 +151,7 @@ struct Z_Construct_UFunction_ULoopingTranscribeAudio_Transcribe_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "BlueprintInternalUseOnly", "true" },
-		{ "Category", "Iamai Core" },
+		{ "Category", "iamai" },
 		{ "DisplayName", "Loop Transcribe Audio" },
 		{ "ModuleRelativePath", "Public/LoopingTranscribeAudio.h" },
 		{ "WorldContext", "WorldContextObject" },
@@ -238,7 +238,7 @@ struct Z_Construct_UClass_ULoopingTranscribeAudio_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ULoopingTranscribeAudio_Transcribe, "Transcribe" }, // 2093426033
+		{ &Z_Construct_UFunction_ULoopingTranscribeAudio_Transcribe, "Transcribe" }, // 3651170981
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -288,14 +288,14 @@ ULoopingTranscribeAudio::~ULoopingTranscribeAudio() {}
 // End Class ULoopingTranscribeAudio
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_pal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_LoopingTranscribeAudio_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_unreal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_LoopingTranscribeAudio_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ULoopingTranscribeAudio, ULoopingTranscribeAudio::StaticClass, TEXT("ULoopingTranscribeAudio"), &Z_Registration_Info_UClass_ULoopingTranscribeAudio, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ULoopingTranscribeAudio), 1971211423U) },
+		{ Z_Construct_UClass_ULoopingTranscribeAudio, ULoopingTranscribeAudio::StaticClass, TEXT("ULoopingTranscribeAudio"), &Z_Registration_Info_UClass_ULoopingTranscribeAudio, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ULoopingTranscribeAudio), 961139950U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_pal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_LoopingTranscribeAudio_h_1783468302(TEXT("/Script/iamaiUnreal"),
-	Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_pal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_LoopingTranscribeAudio_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_pal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_LoopingTranscribeAudio_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_unreal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_LoopingTranscribeAudio_h_2181833020(TEXT("/Script/iamaiUnreal"),
+	Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_unreal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_LoopingTranscribeAudio_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_unreal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_LoopingTranscribeAudio_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

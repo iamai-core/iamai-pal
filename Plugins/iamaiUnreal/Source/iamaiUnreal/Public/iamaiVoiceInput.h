@@ -7,8 +7,6 @@
 
 #include "iamaiVoiceInput.generated.h"
 
-#define SYNTHCOMPONENT_EX_OSCILATOR_ENABLED 1
-
 UCLASS(ClassGroup = Synth, meta = (BlueprintSpawnableComponent))
 class IAMAIUNREAL_API UiamaiVoiceInput : public USynthComponent {
 
@@ -21,10 +19,10 @@ public:
 	virtual int32 OnGenerateAudio(float* OutAudio, int32 NumSamples) override;
 	virtual void BeginDestroy() override;
 
-	UFUNCTION(BlueprintCallable, Category = "iamai core")
+	UFUNCTION(BlueprintCallable, Category = "iamai")
 	void StartCapturingAudio();
 
-	UFUNCTION(BlueprintCallable, Category = "iamai core")
+	UFUNCTION(BlueprintCallable, Category = "iamai")
 	void StopCapturingAudio();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Voice Input")

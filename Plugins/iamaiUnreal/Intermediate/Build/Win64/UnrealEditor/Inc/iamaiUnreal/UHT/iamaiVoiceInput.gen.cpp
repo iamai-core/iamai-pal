@@ -10,7 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeiamaiVoiceInput() {}
 
 // Begin Cross Module References
-AUDIOMIXER_API UClass* Z_Construct_UClass_USynthComponent();
+ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 IAMAIUNREAL_API UClass* Z_Construct_UClass_UiamaiVoiceInput();
 IAMAIUNREAL_API UClass* Z_Construct_UClass_UiamaiVoiceInput_NoRegister();
 UPackage* Z_Construct_UPackage__Script_iamaiUnreal();
@@ -21,7 +21,7 @@ struct Z_Construct_UFunction_UiamaiVoiceInput_StartCapturingAudio_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "iamai core" },
+		{ "Category", "iamai" },
 		{ "ModuleRelativePath", "Public/iamaiVoiceInput.h" },
 	};
 #endif // WITH_METADATA
@@ -51,7 +51,7 @@ struct Z_Construct_UFunction_UiamaiVoiceInput_StopCapturingAudio_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "iamai core" },
+		{ "Category", "iamai" },
 		{ "ModuleRelativePath", "Public/iamaiVoiceInput.h" },
 	};
 #endif // WITH_METADATA
@@ -97,7 +97,6 @@ struct Z_Construct_UClass_UiamaiVoiceInput_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "BlueprintSpawnableComponent", "" },
 		{ "ClassGroupNames", "Synth" },
-		{ "HideCategories", "Object ActorComponent Physics Rendering Mobility LOD Trigger PhysicsVolume" },
 		{ "IncludePath", "iamaiVoiceInput.h" },
 		{ "ModuleRelativePath", "Public/iamaiVoiceInput.h" },
 	};
@@ -120,8 +119,8 @@ struct Z_Construct_UClass_UiamaiVoiceInput_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UiamaiVoiceInput_StartCapturingAudio, "StartCapturingAudio" }, // 270197103
-		{ &Z_Construct_UFunction_UiamaiVoiceInput_StopCapturingAudio, "StopCapturingAudio" }, // 216496369
+		{ &Z_Construct_UFunction_UiamaiVoiceInput_StartCapturingAudio, "StartCapturingAudio" }, // 2232208197
+		{ &Z_Construct_UFunction_UiamaiVoiceInput_StopCapturingAudio, "StopCapturingAudio" }, // 3417050153
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -141,7 +140,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UiamaiVoi
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UiamaiVoiceInput_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UiamaiVoiceInput_Statics::DependentSingletons[])() = {
-	(UObject* (*)())Z_Construct_UClass_USynthComponent,
+	(UObject* (*)())Z_Construct_UClass_UActorComponent,
 	(UObject* (*)())Z_Construct_UPackage__Script_iamaiUnreal,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UiamaiVoiceInput_Statics::DependentSingletons) < 16);
@@ -178,14 +177,14 @@ UiamaiVoiceInput::~UiamaiVoiceInput() {}
 // End Class UiamaiVoiceInput
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_pal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_iamaiVoiceInput_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_unreal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_iamaiVoiceInput_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UiamaiVoiceInput, UiamaiVoiceInput::StaticClass, TEXT("UiamaiVoiceInput"), &Z_Registration_Info_UClass_UiamaiVoiceInput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UiamaiVoiceInput), 825478180U) },
+		{ Z_Construct_UClass_UiamaiVoiceInput, UiamaiVoiceInput::StaticClass, TEXT("UiamaiVoiceInput"), &Z_Registration_Info_UClass_UiamaiVoiceInput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UiamaiVoiceInput), 2539215317U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_pal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_iamaiVoiceInput_h_3037715699(TEXT("/Script/iamaiUnreal"),
-	Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_pal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_iamaiVoiceInput_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_pal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_iamaiVoiceInput_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_unreal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_iamaiVoiceInput_h_1847705669(TEXT("/Script/iamaiUnreal"),
+	Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_unreal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_iamaiVoiceInput_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_unreal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_iamaiVoiceInput_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

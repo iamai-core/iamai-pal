@@ -23,7 +23,7 @@ public:
 
 	ULoopingTranscribeAudio();
 
-	UFUNCTION(BlueprintCallable, meta = (BlueprintInternalUseOnly = "true", WorldContext = "WorldContextObject", DisplayName = "Loop Transcribe Audio", Category = "Iamai Core"))
+	UFUNCTION(BlueprintCallable, meta = (BlueprintInternalUseOnly = "true", WorldContext = "WorldContextObject", DisplayName = "Loop Transcribe Audio", Category = "iamai"))
 	static ULoopingTranscribeAudio* Transcribe(UObject* WorldContextObject, float time, UAIWrapper* AIWrapper, UiamaiVoiceInput* iamaiVoiceInput, FOnTextTranscribedDelegate InDelegate);
 
 	UPROPERTY(BlueprintAssignable)

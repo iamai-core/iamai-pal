@@ -22,12 +22,14 @@ using LibHandle = void*;
 
 #endif
 
+struct FiamaiConfig;
+
 class IAMAIUNREAL_API iamaiAI {
 
 public:
 
 	iamaiAI(UGGUFModelAsset* model);
-	iamaiAI(UGGUFModelAsset* model, int size, int tokens = 512, int batch = 512, int threads = 1);
+	iamaiAI(UGGUFModelAsset* model, FiamaiConfig config);
 	~iamaiAI();
 
 	iamaiAI(const iamaiAI&) = delete;
@@ -37,6 +39,14 @@ public:
 
 	void SetMaxTokens(int maxTokens) {
 		_setMaxTokens(ctx, maxTokens);
+	}
+
+	void SetPromptFormat(const std::string& format) {
+		_setPromptFormat(ctx, format.c_str());
+	}
+
+	void ClearPromptFormat() {
+		_clearPromptFormat(ctx);
 	}
 
 private:
@@ -49,15 +59,19 @@ private:
 	bool disposed = false;
 
 	typedef void* (*InitFunction)(const char* modelPath);
-	typedef void* (*FullInitFunction)(const char* modelPath, int size, int tokens, int batch, int threads);
+	typedef void* (*FullInitFunction)(const char* modelPath, int size, int tokens, int batch, int threads, int top_k, float top_p, float temperature, uint32_t seed);
 	typedef bool (*GenerateFunction)(void* context, const char* prompt, char* output, int maxLength);
 	typedef void (*SetMaxTokensFunction)(void* context, int maxTokens);
+	typedef void (*SetPromptFormatFunction)(void* context, const char* format);
+	typedef void (*ClearPromptFormatFunction)(void* context);
 	typedef void (*FreeFunction)(void* context);
 
 	InitFunction _init;
 	FullInitFunction _fullInit;
 	GenerateFunction _generate;
 	SetMaxTokensFunction _setMaxTokens;
+	SetPromptFormatFunction _setPromptFormat;
+	ClearPromptFormatFunction _clearPromptFormat;
 	FreeFunction _free;
 
 	template<typename T>

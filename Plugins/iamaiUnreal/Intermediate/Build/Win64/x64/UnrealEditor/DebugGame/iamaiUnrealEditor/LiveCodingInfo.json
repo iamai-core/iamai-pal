@@ -6,9 +6,9 @@
 			"GGUFModelFactory.gen.cpp.obj",
 			"iamaiUnrealEditor.init.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
-			"iamaiUnrealEditor.cpp.obj",
 			"BinModelFactory.cpp.obj",
-			"GGUFModelFactory.cpp.obj"
+			"GGUFModelFactory.cpp.obj",
+			"iamaiUnrealEditor.cpp.obj"
 		]
 	}
 }

@@ -23,21 +23,19 @@ UInitializeAI* UInitializeAI::CreateInitializeIamai(UGGUFModelAsset* IamaiModel)
 
 }
 
-UInitializeAI* UInitializeAI::CreateInitializeIamaiParamaters(UGGUFModelAsset* IamaiModel, int size, int tokens, int batch, int threads) {
+UInitializeAI* UInitializeAI::CreateInitializeIamaiParamaters(UGGUFModelAsset* IamaiModel, FiamaiConfig config) {
 	
 	UInitializeAI* Node = NewObject<UInitializeAI>();
 
 	Node->m_iamaiModel = IamaiModel;
-	Node->m_size = size;
-	Node->m_iamaiTokens = tokens;
-	Node->m_iamaiBatch = batch;
-	Node->m_iamaiThreads = threads;
+	Node->iamaiConfig = config;
+	Node->bUseConfig = true;
 
 	return Node;
 
 }
 
-UInitializeAI* UInitializeAI::InitializeIamai(UAIWrapper* Wrapper, UGGUFModelAsset* IamaiModel, int tokens, int batch, int threads) {
+UInitializeAI* UInitializeAI::InitializeIamai(UAIWrapper* Wrapper, UGGUFModelAsset* IamaiModel) {
 
 	if (!Wrapper) return nullptr;
 
@@ -45,9 +43,21 @@ UInitializeAI* UInitializeAI::InitializeIamai(UAIWrapper* Wrapper, UGGUFModelAss
 
 	Node->m_iamaiModel = IamaiModel;
 	Node->m_aiWrapper = Wrapper;
-	Node->m_iamaiTokens = tokens;
-	Node->m_iamaiBatch = batch;
-	Node->m_iamaiThreads = threads;
+
+	return Node;
+
+}
+
+UInitializeAI* UInitializeAI::InitializeIamaiParamaters(UAIWrapper* Wrapper, UGGUFModelAsset* IamaiModel, FiamaiConfig config) {
+	
+	if (!Wrapper) return nullptr;
+
+	UInitializeAI* Node = NewObject<UInitializeAI>();
+
+	Node->m_iamaiModel = IamaiModel;
+	Node->m_aiWrapper = Wrapper;
+	Node->iamaiConfig = config;
+	Node->bUseConfig = true;
 
 	return Node;
 
@@ -93,7 +103,7 @@ void UInitializeAI::Activate() {
 			bWrapper = true;
 			if (m_iamaiModel) {
 
-				if (m_size > 0) bIamaiModel = m_aiWrapper->InitializeIamai(m_iamaiModel, m_size, m_iamaiTokens, m_iamaiBatch, m_iamaiThreads);
+				if (bUseConfig) bIamaiModel = m_aiWrapper->InitializeIamai(m_iamaiModel, iamaiConfig);
 				else bIamaiModel = m_aiWrapper->DefaultInitializeIamai(m_iamaiModel);
 
 			}

@@ -2,6 +2,7 @@
 
 #include "AIWrapper.h"
 #include "fstream"
+#include "iamaiConfig.h"
 
 UAIWrapper::UAIWrapper() :
 	iamaiInstance(nullptr),
@@ -27,11 +28,28 @@ bool UAIWrapper::DefaultInitializeIamai(UGGUFModelAsset* model) {
 
 }
 
-bool UAIWrapper::InitializeIamai(UGGUFModelAsset* model, int size, int tokens, int batch, int threads) {
+bool UAIWrapper::InitializeIamai(UGGUFModelAsset* model) {
 
 	try {
 
-		iamaiInstance = std::make_unique<iamaiAI>(model, size, tokens, batch, threads);
+		iamaiInstance = std::make_unique<iamaiAI>(model);
+		return true;
+
+	} catch (const std::exception& e) {
+
+		UE_LOG(LogTemp, Error, TEXT("AI initialization error: %s"), UTF8_TO_TCHAR(e.what()));
+		return false;
+
+	}
+
+}
+
+
+bool UAIWrapper::InitializeIamai(UGGUFModelAsset* model, FiamaiConfig config) {
+
+	try {
+
+		iamaiInstance = std::make_unique<iamaiAI>(model, config);
 		return true;
 
 	} catch (const std::exception& e) {
@@ -85,6 +103,18 @@ FString UAIWrapper::Generate(const std::string& Prompt, int32 MaxLength) {
 void UAIWrapper::SetMaxTokens(int32 MaxTokens) {
 
 	if (iamaiInstance) iamaiInstance->SetMaxTokens(MaxTokens);
+
+}
+
+void UAIWrapper::SetPromptFormat(const FString& Format) {
+
+	if (iamaiInstance) iamaiInstance->SetPromptFormat(TCHAR_TO_UTF8(*Format));
+
+}
+
+void UAIWrapper::ClearPromptFormat() {
+
+	if (iamaiInstance) iamaiInstance->ClearPromptFormat();
 
 }
 

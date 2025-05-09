@@ -18,21 +18,17 @@
 	"Modules": [
 		{
 			"Name": "iamaiUnreal",
-			"Type": "Runtime"
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
 		},
 		{
 			"Name": "iamaiUnrealEditor",
 			"Type": "Editor",
-			"AdditionalDependencies": [ "iamaiUnreal" ]
+			"AdditionalDependencies": [ "iamaiUnreal" ],
+			"LoadingPhase": "Default"
 		}
 	],
 	"AdditionalNonAssetDirectoriesToCopy": [
 		"Models"
-	],
-	"Plugins": [
-		{
-			"Name": "AudioCapture",
-			"Enabled": true
-		}
 	]
 }
