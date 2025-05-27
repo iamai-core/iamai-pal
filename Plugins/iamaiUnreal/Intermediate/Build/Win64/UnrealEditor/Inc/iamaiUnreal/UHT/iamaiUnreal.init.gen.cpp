@@ -29,13 +29,13 @@ void EmptyLinkFunctionForGeneratedCodeiamaiUnreal_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xCBA45B2E,
-				0x244B5FA2,
+				0x4E1716C0,
+				0xFD18ABC2,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_iamaiUnreal.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_iamaiUnreal.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_iamaiUnreal(Z_Construct_UPackage__Script_iamaiUnreal, TEXT("/Script/iamaiUnreal"), Z_Registration_Info_UPackage__Script_iamaiUnreal, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xCBA45B2E, 0x244B5FA2));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_iamaiUnreal(Z_Construct_UPackage__Script_iamaiUnreal, TEXT("/Script/iamaiUnreal"), Z_Registration_Info_UPackage__Script_iamaiUnreal, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x4E1716C0, 0xFD18ABC2));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

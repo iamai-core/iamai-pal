@@ -10,7 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeiamaiVoiceInput() {}
 
 // Begin Cross Module References
-ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
+AUDIOMIXER_API UClass* Z_Construct_UClass_USynthComponent();
 IAMAIUNREAL_API UClass* Z_Construct_UClass_UiamaiVoiceInput();
 IAMAIUNREAL_API UClass* Z_Construct_UClass_UiamaiVoiceInput_NoRegister();
 UPackage* Z_Construct_UPackage__Script_iamaiUnreal();
@@ -97,6 +97,7 @@ struct Z_Construct_UClass_UiamaiVoiceInput_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "BlueprintSpawnableComponent", "" },
 		{ "ClassGroupNames", "Synth" },
+		{ "HideCategories", "Object ActorComponent Physics Rendering Mobility LOD Trigger PhysicsVolume" },
 		{ "IncludePath", "iamaiVoiceInput.h" },
 		{ "ModuleRelativePath", "Public/iamaiVoiceInput.h" },
 	};
@@ -140,7 +141,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UiamaiVoi
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UiamaiVoiceInput_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UiamaiVoiceInput_Statics::DependentSingletons[])() = {
-	(UObject* (*)())Z_Construct_UClass_UActorComponent,
+	(UObject* (*)())Z_Construct_UClass_USynthComponent,
 	(UObject* (*)())Z_Construct_UPackage__Script_iamaiUnreal,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UiamaiVoiceInput_Statics::DependentSingletons) < 16);
@@ -177,14 +178,14 @@ UiamaiVoiceInput::~UiamaiVoiceInput() {}
 // End Class UiamaiVoiceInput
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_unreal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_iamaiVoiceInput_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_Trevor_Hicks_Desktop_Neumont_College_Fourth_year_Spring2025_Enterprise_3_NOVA_project_iamai_pal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_iamaiVoiceInput_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UiamaiVoiceInput, UiamaiVoiceInput::StaticClass, TEXT("UiamaiVoiceInput"), &Z_Registration_Info_UClass_UiamaiVoiceInput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UiamaiVoiceInput), 2539215317U) },
+		{ Z_Construct_UClass_UiamaiVoiceInput, UiamaiVoiceInput::StaticClass, TEXT("UiamaiVoiceInput"), &Z_Registration_Info_UClass_UiamaiVoiceInput, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UiamaiVoiceInput), 3813815070U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_unreal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_iamaiVoiceInput_h_1847705669(TEXT("/Script/iamaiUnreal"),
-	Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_unreal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_iamaiVoiceInput_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Collin_Documents_Repos_iamai_unreal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_iamaiVoiceInput_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Trevor_Hicks_Desktop_Neumont_College_Fourth_year_Spring2025_Enterprise_3_NOVA_project_iamai_pal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_iamaiVoiceInput_h_904740761(TEXT("/Script/iamaiUnreal"),
+	Z_CompiledInDeferFile_FID_Users_Trevor_Hicks_Desktop_Neumont_College_Fourth_year_Spring2025_Enterprise_3_NOVA_project_iamai_pal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_iamaiVoiceInput_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Trevor_Hicks_Desktop_Neumont_College_Fourth_year_Spring2025_Enterprise_3_NOVA_project_iamai_pal_Plugins_iamaiUnreal_Source_iamaiUnreal_Public_iamaiVoiceInput_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration
