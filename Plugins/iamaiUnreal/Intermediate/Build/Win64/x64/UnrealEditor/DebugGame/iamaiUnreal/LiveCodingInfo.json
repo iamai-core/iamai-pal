@@ -19,11 +19,11 @@
 			"GGUFModelAsset.cpp.obj",
 			"iamaiAI.cpp.obj",
 			"iamaiUnreal.cpp.obj",
+			"iamaiVoiceInput.cpp.obj",
 			"InitializeAI.cpp.obj",
 			"LoopingTranscribeAudio.cpp.obj",
 			"TranscribeAudio.cpp.obj",
-			"WhisperAI.cpp.obj",
-			"iamaiVoiceInput.cpp.obj"
+			"WhisperAI.cpp.obj"
 		]
 	}
 }

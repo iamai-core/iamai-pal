@@ -81,7 +81,9 @@
 /DUE_BUILD_DEVELOPMENT=1
 /DORIGINAL_FILE_NAME="UnrealEditor-iamaiUnreal-Win64-DebugGame.dll"
 /DBUILD_ICON_FILE_NAME="\"..\\Build\\Windows\\Resources\\Default.ico\""
-/DPROJECT_COPYRIGHT_STRING="Fill out your copyright notice in the Description page of Project Settings."
-/DPROJECT_PRODUCT_IDENTIFIER=iamaiUnrealPlugin
-/fo "C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnreal\Default.rc2.res"
+/DPROJECT_COMPANY_NAME="iamai core"
+/DPROJECT_COPYRIGHT_STRING="© 2025 iamai-core. All rights reserved."
+/DPROJECT_PRODUCT_NAME=N.O.V.A
+/DPROJECT_PRODUCT_IDENTIFIER=test
+/fo "C:\Users\Trevor Hicks\Desktop\Neumont College\Fourth year\Spring2025\Enterprise 3\NOVA project\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\iamaiUnreal\Default.rc2.res"
 "..\Build\Windows\Resources\Default.rc2"
