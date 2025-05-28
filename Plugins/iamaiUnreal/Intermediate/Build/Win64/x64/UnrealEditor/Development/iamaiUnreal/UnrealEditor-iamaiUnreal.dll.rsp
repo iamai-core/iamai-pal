@@ -36,11 +36,9 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN:6
 /NOIMPLIB
-"C:\Users\Collin\Documents\Repos\iamai-unreal\Intermediate\Build\Win64\x64\iamaiUnrealPluginEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
-"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\Module.iamaiUnreal.cpp.obj"
-"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\iamaiVoiceInput.cpp.obj"
-"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\WhisperAI.cpp.obj"
-"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\Default.rc2.res"
+"C:\Users\Collin\Documents\Repos\iamai-pal\Intermediate\Build\Win64\x64\iamaipalEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h.obj"
+"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\Module.iamaiUnreal.cpp.obj"
+"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\Default.rc2.res"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Core\UnrealEditor-Core.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUObject\UnrealEditor-CoreUObject.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\UnrealEditor-Engine.lib"
@@ -74,6 +72,6 @@
 "synchronization.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Binaries\Win64\UnrealEditor-iamaiUnreal.dll"
-/PDB:"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Binaries\Win64\UnrealEditor-iamaiUnreal.pdb"
+/OUT:"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Binaries\Win64\UnrealEditor-iamaiUnreal.dll"
+/PDB:"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Binaries\Win64\UnrealEditor-iamaiUnreal.pdb"
 /ignore:4078

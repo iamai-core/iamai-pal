@@ -5,7 +5,7 @@
 	"Description": "",
 	"Modules": [
 		{
-			"Name": "test",
+			"Name": "iamaipal",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}
