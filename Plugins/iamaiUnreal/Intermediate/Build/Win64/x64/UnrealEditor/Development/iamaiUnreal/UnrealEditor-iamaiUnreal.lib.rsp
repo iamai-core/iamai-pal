@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-iamaiUnreal.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\Collin\Documents\Repos\iamai-unreal\Intermediate\Build\Win64\x64\iamaiUnrealPluginEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\Module.iamaiUnreal.cpp.obj"
+"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\iamaiVoiceInput.cpp.obj"
+"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\WhisperAI.cpp.obj"
+"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\Default.rc2.res"
+/OUT:"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnreal\UnrealEditor-iamaiUnreal.lib"
