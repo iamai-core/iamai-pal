@@ -1,0 +1,8 @@
+{
+	"BuildId": "37670630",
+	"Modules": 
+	{
+		"iamaiUnreal": "UnrealEditor-iamaiUnreal-Win64-DebugGame.dll",
+		"iamaiUnrealEditor": "UnrealEditor-iamaiUnrealEditor-Win64-DebugGame.dll"
+	}
+}

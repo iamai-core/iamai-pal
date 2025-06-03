@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\collin\\documents\\unreal projects\\iamai_pal\\plugins\\iamaiunreal\\source\\iamaiunreal\\private\\iamaiunreal.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\collin\\documents\\unreal projects\\iamai_pal\\intermediate\\build\\win64\\x64\\iamai_pal\\development\\engine\\sharedpch.engine.project.exceptions.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\collin\\documents\\unreal projects\\iamai_pal\\plugins\\iamaiunreal\\intermediate\\build\\win64\\x64\\unrealgame\\development\\iamaiunreal\\definitions.iamaiunreal.h",
+            "c:\\users\\collin\\documents\\unreal projects\\iamai_pal\\plugins\\iamaiunreal\\source\\iamaiunreal\\public\\iamaiunreal.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

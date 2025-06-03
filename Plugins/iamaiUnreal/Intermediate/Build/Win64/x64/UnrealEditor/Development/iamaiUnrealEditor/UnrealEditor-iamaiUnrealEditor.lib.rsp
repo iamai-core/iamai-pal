@@ -6,7 +6,7 @@
 /NAME:"UnrealEditor-iamaiUnrealEditor.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"C:\Users\Collin\Documents\Repos\iamai-pal\Intermediate\Build\Win64\x64\iamaipalEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h.obj"
-"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.obj"
-"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Default.rc2.res"
-/OUT:"C:\Users\Collin\Documents\Repos\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\UnrealEditor-iamaiUnrealEditor.lib"
+"C:\Users\Collin\Documents\Repos\iamai-unreal\Intermediate\Build\Win64\x64\iamaiUnrealPluginEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.obj"
+"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Default.rc2.res"
+/OUT:"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\UnrealEditor-iamaiUnrealEditor.lib"

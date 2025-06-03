@@ -19,4 +19,3 @@
 #include "C:/Users/Collin/Documents/Repos/iamai-unreal/Plugins/iamaiUnreal/Source/iamaiUnreal/Private/InitializeAI.cpp"
 #include "C:/Users/Collin/Documents/Repos/iamai-unreal/Plugins/iamaiUnreal/Source/iamaiUnreal/Private/LoopingTranscribeAudio.cpp"
 #include "C:/Users/Collin/Documents/Repos/iamai-unreal/Plugins/iamaiUnreal/Source/iamaiUnreal/Private/TranscribeAudio.cpp"
-#include "C:/Users/Collin/Documents/Repos/iamai-unreal/Plugins/iamaiUnreal/Source/iamaiUnreal/Private/WhisperAI.cpp"

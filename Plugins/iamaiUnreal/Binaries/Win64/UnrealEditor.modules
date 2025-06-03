@@ -1,0 +1,8 @@
+{
+	"BuildId": "37670630",
+	"Modules": 
+	{
+		"iamaiUnreal": "UnrealEditor-iamaiUnreal.dll",
+		"iamaiUnrealEditor": "UnrealEditor-iamaiUnrealEditor.dll"
+	}
+}

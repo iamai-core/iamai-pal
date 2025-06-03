@@ -22,8 +22,8 @@
 			"InitializeAI.cpp.obj",
 			"LoopingTranscribeAudio.cpp.obj",
 			"TranscribeAudio.cpp.obj",
-			"WhisperAI.cpp.obj",
-			"iamaiVoiceInput.cpp.obj"
+			"iamaiVoiceInput.cpp.obj",
+			"WhisperAI.cpp.obj"
 		]
 	}
 }
