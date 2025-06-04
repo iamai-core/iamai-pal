@@ -1,12 +1,12 @@
-"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp"
-/FI"C:\Users\Collin\Documents\Repos\iamai-unreal\Intermediate\Build\Win64\x64\iamaiUnrealPluginEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/FI"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Definitions.iamaiUnrealEditor.h"
-/Yu"C:\Users\Collin\Documents\Repos\iamai-unreal\Intermediate\Build\Win64\x64\iamaiUnrealPluginEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/Fp"C:\Users\Collin\Documents\Repos\iamai-unreal\Intermediate\Build\Win64\x64\iamaiUnrealPluginEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
-/Fo"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.obj"
-/experimental:log "C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.sarif"
-/sourceDependencies "C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.dep.json"
-@"C:\Users\Collin\Documents\Repos\iamai-unreal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\iamaiUnrealEditor.Shared.rsp"
+"C:\Neumont\Enterprise\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp"
+/FI"C:\Neumont\Enterprise\iamai-pal\Intermediate\Build\Win64\x64\iamai_palEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/FI"C:\Neumont\Enterprise\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Definitions.iamaiUnrealEditor.h"
+/Yu"C:\Neumont\Enterprise\iamai-pal\Intermediate\Build\Win64\x64\iamai_palEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/Fp"C:\Neumont\Enterprise\iamai-pal\Intermediate\Build\Win64\x64\iamai_palEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
+/Fo"C:\Neumont\Enterprise\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.obj"
+/experimental:log "C:\Neumont\Enterprise\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.sarif"
+/sourceDependencies "C:\Neumont\Enterprise\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\Module.iamaiUnrealEditor.cpp.dep.json"
+@"C:\Neumont\Enterprise\iamai-pal\Plugins\iamaiUnreal\Intermediate\Build\Win64\x64\UnrealEditor\Development\iamaiUnrealEditor\iamaiUnrealEditor.Shared.rsp"
 /d2ssa-cfg-question-
 /Zc:inline
 /nologo
